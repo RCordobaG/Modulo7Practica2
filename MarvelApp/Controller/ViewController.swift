@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var keyLoader = KeyLoader.shared
     var characterManager : CharacterServiceManager?
+    var selectedCharacter : Character?
 
     @IBOutlet weak var characterCollectionView: UICollectionView!
     
@@ -46,6 +47,16 @@ class ViewController: UIViewController {
 extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (characterManager?.countCharacter())!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCharacter = characterManager?.getCharacter(at: indexPath.item)
+        self.performSegue(withIdentifier: "showCharDetail", sender: Self.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! DetailViewController
+        destination.character = selectedCharacter
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
