@@ -104,44 +104,62 @@
             </objects>
             <point key="canvasLocation" x="916.79389312977094" y="26.760563380281692"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="wlU-OA-oN7">
             <objects>
-                <viewController id="LAd-bB-k7V" sceneMemberID="viewController">
+                <viewController id="LAd-bB-k7V" customClass="MainMenuViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVm-7z-B4k">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Marvel_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CH1-AH-jNI">
-                                <rect key="frame" x="20" y="128" width="353" height="152"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marvel_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CH1-AH-jNI">
+                                <rect key="frame" x="20" y="129" width="353" height="322"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xu5-UL-hC1">
-                                <rect key="frame" x="110" y="409" width="173" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xu5-UL-hC1">
+                                <rect key="frame" x="110" y="501" width="173" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show all characters"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowAll" id="kZg-07-4x1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkr-rE-VUu">
-                                <rect key="frame" x="138" y="570" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkr-rE-VUu">
+                                <rect key="frame" x="138" y="566" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="My favorites"/>
                                 <connections>
                                     <segue destination="UD0-ab-UTG" kind="show" identifier="ShowFavs" id="HEy-ij-M4h"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="For API resources used click here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bfN-rf-BRo">
+                                <rect key="frame" x="0.0" y="730" width="393" height="108"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fjb-MA-bMN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wkr-rE-VUu" firstAttribute="top" secondItem="xu5-UL-hC1" secondAttribute="bottom" constant="30" id="0mH-ek-EdK"/>
+                            <constraint firstItem="xu5-UL-hC1" firstAttribute="top" secondItem="CH1-AH-jNI" secondAttribute="bottom" constant="50" id="5RC-We-XtU"/>
+                            <constraint firstItem="bfN-rf-BRo" firstAttribute="bottom" secondItem="fjb-MA-bMN" secondAttribute="bottom" constant="20" id="F7f-WH-g3l"/>
+                            <constraint firstItem="bfN-rf-BRo" firstAttribute="top" secondItem="wkr-rE-VUu" secondAttribute="bottom" constant="20" id="HdS-6q-F4j"/>
                             <constraint firstItem="CH1-AH-jNI" firstAttribute="leading" secondItem="ZVm-7z-B4k" secondAttribute="leading" constant="20" id="HfX-ai-QD8"/>
+                            <constraint firstItem="fjb-MA-bMN" firstAttribute="trailing" secondItem="xu5-UL-hC1" secondAttribute="trailing" constant="110" id="Ikn-RC-a8T"/>
                             <constraint firstItem="CH1-AH-jNI" firstAttribute="top" secondItem="fjb-MA-bMN" secondAttribute="top" constant="70" id="OXA-Og-8L7"/>
+                            <constraint firstItem="fjb-MA-bMN" firstAttribute="trailing" secondItem="wkr-rE-VUu" secondAttribute="trailing" constant="138" id="Ukl-nV-6KO"/>
+                            <constraint firstItem="fjb-MA-bMN" firstAttribute="trailing" secondItem="bfN-rf-BRo" secondAttribute="trailing" id="XoD-Ud-vu8"/>
+                            <constraint firstItem="xu5-UL-hC1" firstAttribute="leading" secondItem="fjb-MA-bMN" secondAttribute="leading" constant="110" id="Zxi-K7-B8V"/>
                             <constraint firstItem="fjb-MA-bMN" firstAttribute="trailing" secondItem="CH1-AH-jNI" secondAttribute="trailing" constant="20" id="lpN-u2-g4f"/>
+                            <constraint firstItem="wkr-rE-VUu" firstAttribute="leading" secondItem="fjb-MA-bMN" secondAttribute="leading" constant="138" id="qgN-ci-Iad"/>
+                            <constraint firstItem="bfN-rf-BRo" firstAttribute="leading" secondItem="fjb-MA-bMN" secondAttribute="leading" id="wWC-9w-8eD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="linkTextView" destination="bfN-rf-BRo" id="bNK-K4-obA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oa-BF-ECz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,6 +436,9 @@
     </scenes>
     <resources>
         <image name="Marvel_Logo" width="800" height="322"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

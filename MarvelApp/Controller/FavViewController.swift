@@ -92,6 +92,7 @@ extension FavViewController : UIScrollViewDelegate {
         let contentHeight = scrollView.contentSize.height
         let scrollviewHeight = scrollView.bounds.height
 
+        /*
         if (offsetY > (contentHeight - scrollviewHeight)) && (!characterManager!.maxItemsLoaded && !characterManager!.isLoading ){
             print("calling API...")
             self.characterManager!.isLoading = true
@@ -112,5 +113,6 @@ extension FavViewController : UIScrollViewDelegate {
         else{
             print("Don't call API...")
         }
+         */
     }
 }

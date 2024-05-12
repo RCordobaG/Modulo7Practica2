@@ -37,10 +37,12 @@
 		5B770FDE2BF089010048AB3C /* marvel.keys in Resources */ = {isa = PBXBuildFile; fileRef = 5B770FDD2BF089000048AB3C /* marvel.keys */; };
 		5B770FE12BF0918B0048AB3C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE02BF0918B0048AB3C /* DetailViewController.swift */; };
 		5B770FE32BF093C80048AB3C /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE22BF093C80048AB3C /* CharacterDetail.swift */; };
-		5B770FE62BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE42BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift */; };
-		5B770FE72BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE52BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift */; };
 		5B770FEC2BF0A6AC0048AB3C /* FavCharManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FEB2BF0A6AC0048AB3C /* FavCharManager.swift */; };
 		5B770FF02BF0B6530048AB3C /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FEF2BF0B6530048AB3C /* FavViewController.swift */; };
+		5B770FF32BF0C0B30048AB3C /* FavoriteCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FF12BF0C0B30048AB3C /* FavoriteCharacter+CoreDataClass.swift */; };
+		5B770FF42BF0C0B30048AB3C /* FavoriteCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FF22BF0C0B30048AB3C /* FavoriteCharacter+CoreDataProperties.swift */; };
+		5B770FF62BF0C2F70048AB3C /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FF52BF0C2F70048AB3C /* MainMenuViewController.swift */; };
+		5B770FF82BF0C3F00048AB3C /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FF72BF0C3F00048AB3C /* NSAttributedStringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +76,12 @@
 		5B770FDD2BF089000048AB3C /* marvel.keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = marvel.keys; sourceTree = "<group>"; };
 		5B770FE02BF0918B0048AB3C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5B770FE22BF093C80048AB3C /* CharacterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
-		5B770FE42BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5B770FE52BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B770FEB2BF0A6AC0048AB3C /* FavCharManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCharManager.swift; sourceTree = "<group>"; };
 		5B770FEF2BF0B6530048AB3C /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		5B770FF12BF0C0B30048AB3C /* FavoriteCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B770FF22BF0C0B30048AB3C /* FavoriteCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B770FF52BF0C2F70048AB3C /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		5B770FF72BF0C3F00048AB3C /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				5B770FA12BF05F6B0048AB3C /* Info.plist */,
 				5B770F992BF05F6A0048AB3C /* MarvelApp.xcdatamodeld */,
 				5B770FDD2BF089000048AB3C /* marvel.keys */,
+				5B770FF72BF0C3F00048AB3C /* NSAttributedStringExtension.swift */,
 			);
 			path = MarvelApp;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				5B770F942BF05F6A0048AB3C /* ViewController.swift */,
 				5B770FE02BF0918B0048AB3C /* DetailViewController.swift */,
 				5B770FEF2BF0B6530048AB3C /* FavViewController.swift */,
+				5B770FF52BF0C2F70048AB3C /* MainMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,8 +204,8 @@
 		5B770FEA2BF0A63B0048AB3C /* SQLModel */ = {
 			isa = PBXGroup;
 			children = (
-				5B770FE42BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift */,
-				5B770FE52BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift */,
+				5B770FF12BF0C0B30048AB3C /* FavoriteCharacter+CoreDataClass.swift */,
+				5B770FF22BF0C0B30048AB3C /* FavoriteCharacter+CoreDataProperties.swift */,
 				5B770FEB2BF0A6AC0048AB3C /* FavCharManager.swift */,
 			);
 			path = SQLModel;
@@ -289,6 +295,7 @@
 				5B770FD22BF065390048AB3C /* DoubleExtension.swift in Sources */,
 				5B770FCE2BF063F00048AB3C /* SerieItem.swift in Sources */,
 				5B770FB42BF0623B0048AB3C /* Constants.swift in Sources */,
+				5B770FF62BF0C2F70048AB3C /* MainMenuViewController.swift in Sources */,
 				5B770FC92BF063F00048AB3C /* Image.swift in Sources */,
 				5B770FB82BF062AE0048AB3C /* CharacterServiceManager.swift in Sources */,
 				5B770FD02BF063F00048AB3C /* DataResponse.swift in Sources */,
@@ -297,7 +304,10 @@
 				5B770F912BF05F6A0048AB3C /* AppDelegate.swift in Sources */,
 				5B770FD42BF0654D0048AB3C /* StringExtension.swift in Sources */,
 				5B770FC52BF063F00048AB3C /* ComicItem.swift in Sources */,
+				5B770FF32BF0C0B30048AB3C /* FavoriteCharacter+CoreDataClass.swift in Sources */,
+				5B770FF42BF0C0B30048AB3C /* FavoriteCharacter+CoreDataProperties.swift in Sources */,
 				5B770FF02BF0B6530048AB3C /* FavViewController.swift in Sources */,
+				5B770FF82BF0C3F00048AB3C /* NSAttributedStringExtension.swift in Sources */,
 				5B770FCF2BF063F00048AB3C /* Keys.swift in Sources */,
 				5B770FE12BF0918B0048AB3C /* DetailViewController.swift in Sources */,
 				5B770FB62BF062890048AB3C /* CharacterCell.swift in Sources */,
@@ -309,8 +319,6 @@
 				5B770FC82BF063F00048AB3C /* ResourceList.swift in Sources */,
 				5B770F932BF05F6A0048AB3C /* SceneDelegate.swift in Sources */,
 				5B770FC62BF063F00048AB3C /* EventItem.swift in Sources */,
-				5B770FE62BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift in Sources */,
-				5B770FE72BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift in Sources */,
 				5B770FCB2BF063F00048AB3C /* URLWebSite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LCCA67G74J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -490,6 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LCCA67G74J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarvelApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
