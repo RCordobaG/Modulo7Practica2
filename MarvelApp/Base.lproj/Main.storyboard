@@ -130,7 +130,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="My favorites"/>
                                 <connections>
-                                    <segue destination="UD0-ab-UTG" kind="show" id="wCT-Sb-qfo"/>
+                                    <segue destination="UD0-ab-UTG" kind="show" identifier="ShowFavs" id="HEy-ij-M4h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="1817.5572519083969" y="26.760563380281692"/>
         </scene>
-        <!--View Controller-->
+        <!--Fav View Controller-->
         <scene sceneID="gQG-kw-81m">
             <objects>
-                <viewController id="UD0-ab-UTG" customClass="ViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UD0-ab-UTG" customClass="FavViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YLR-DC-oA3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,8 +321,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ytp-vJ-mFW"/>
                     <connections>
-                        <outlet property="characterCollectionView" destination="eR8-i0-1KC" id="eCd-kA-xOr"/>
-                        <segue destination="XdB-zN-XIY" kind="show" identifier="showCharDetail" id="RGp-1F-nqs"/>
+                        <outlet property="FavCharacterCollectionView" destination="eR8-i0-1KC" id="eA9-V9-pM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynq-kI-kKr" sceneMemberID="firstResponder"/>
@@ -334,11 +333,11 @@
             <objects>
                 <viewController id="XdB-zN-XIY" customClass="DetailViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cd8-7t-jmW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-uz-mfP">
-                                <rect key="frame" x="121" y="155" width="150" height="150"/>
+                                <rect key="frame" x="121" y="214" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hrY-uz-mfP" secondAttribute="height" multiplier="1:1" id="5Zu-qd-gmR"/>
                                     <constraint firstAttribute="width" constant="150" id="HPO-7Y-NY7"/>
@@ -346,13 +345,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji2-Am-qSC">
-                                <rect key="frame" x="0.0" y="335" width="393" height="27.666666666666686"/>
+                                <rect key="frame" x="0.0" y="394" width="393" height="27.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmw-tk-YDC">
-                                <rect key="frame" x="0.0" y="50" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="Character Details" id="CSI-UY-Ypx">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="LjX-Nu-fpx">
@@ -369,13 +368,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMH-1i-hKD">
-                                <rect key="frame" x="0.0" y="382.66666666666669" width="393" height="20.333333333333314"/>
+                                <rect key="frame" x="0.0" y="441.66666666666669" width="393" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-7N-7DC">
-                                <rect key="frame" x="0.0" y="433" width="393" height="409"/>
+                                <rect key="frame" x="0.0" y="492" width="393" height="326"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

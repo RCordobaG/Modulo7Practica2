@@ -1,22 +1,28 @@
 //
-//  ViewController.swift
+//  FavViewController.swift
 //  MarvelApp
 //
-//  Created by Rodrigo Córdoba on 11/05/24.
+//  Created by Rodrigo Córdoba on 12/05/24.
 //
 
 import UIKit
 import SDWebImage
 
-sexo con piña
-
-class FavViewController: UIViewController, UICollectionViewDelegate {
+class FavViewController: UIViewController {
     
     var keyLoader = KeyLoader.shared
     var characterManager : CharacterServiceManager?
     var selectedCharacter : Character?
+    
+    var favList : [FavoriteCharacter] = []
+    
+    var favManager : FavCharManager?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var FavCharacterCollectionView: UICollectionView!
+    
 
-    @IBOutlet weak var characterCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +30,17 @@ class FavViewController: UIViewController, UICollectionViewDelegate {
         //print(keyLoader.getAPIParams())
         //print(keyLoader.getQueryString())
         
-        characterCollectionView.delegate = self
-        characterCollectionView.dataSource = self
+        FavCharacterCollectionView.delegate = self
+        FavCharacterCollectionView.dataSource = self
         
         
-        characterManager = CharacterServiceManager()
+        favManager = FavCharManager(context: context)
         
-        characterManager?.loadCharacterData(queryString: keyLoader.getQueryString(limit: Constants.numberOfItemsRequested, offset: 0) ){
-            DispatchQueue.main.async {
-                print("Completion executed!!")
-                self.characterCollectionView.reloadData()
-                //move offset param to retieve next block of character
-                self.characterManager?.offset = (self.characterManager?.countCharacter())!
-            }
-        }
+        favList = favManager?.getFavs() ?? []
+        print(favList)
+        print(favList[0].name)
+        
+        print(favList.count)
     }
     
     @IBAction func dismiss(_ sender: Any) {
@@ -46,11 +49,12 @@ class FavViewController: UIViewController, UICollectionViewDelegate {
     
 }
 
-extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+extension FavViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (characterManager?.countCharacter())!
+        return favList.count
     }
     
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedCharacter = characterManager?.getCharacter(at: indexPath.item)
         self.performSegue(withIdentifier: "showCharDetail", sender: Self.self)
@@ -60,19 +64,21 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
         let destination = segue.destination as! DetailViewController
         destination.character = selectedCharacter
     }
+    */
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CharacterCell
-        cell.characterName.text = characterManager?.getCharacter(at: indexPath.row).name
-        let url = URL(string: (characterManager?.getCharacter(at: indexPath.row).thumbnail.url)!)
+        print(indexPath.row)
+        cell.characterName.text = favList[indexPath.row].name
+        let url = URL(string: (favList[indexPath.row].thumbnail)!)
         cell.characterImage.sd_setImage(with: url)
         
         return cell
     }
 }
 
-extension ViewController : UIScrollViewDelegate {
+extension FavViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         ////        size of scrollview content
@@ -94,7 +100,7 @@ extension ViewController : UIScrollViewDelegate {
 
             self.characterManager!.loadCharacterData(queryString: queryString){
                 DispatchQueue.main.async {
-                    self.characterCollectionView.reloadData()
+                    self.FavCharacterCollectionView.reloadData()
                     print("char com:",self.characterManager!.countCharacter())
                     print("actual offset: ", self.characterManager!.offset)
                     self.characterManager!.offset = self.characterManager!.countCharacter()

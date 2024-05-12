@@ -40,6 +40,7 @@
 		5B770FE62BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE42BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift */; };
 		5B770FE72BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FE52BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift */; };
 		5B770FEC2BF0A6AC0048AB3C /* FavCharManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FEB2BF0A6AC0048AB3C /* FavCharManager.swift */; };
+		5B770FF02BF0B6530048AB3C /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B770FEF2BF0B6530048AB3C /* FavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		5B770FE42BF094C00048AB3C /* FavoriteCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5B770FE52BF094C00048AB3C /* FavoriteCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B770FEB2BF0A6AC0048AB3C /* FavCharManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCharManager.swift; sourceTree = "<group>"; };
+		5B770FEF2BF0B6530048AB3C /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				5B770F942BF05F6A0048AB3C /* ViewController.swift */,
 				5B770FE02BF0918B0048AB3C /* DetailViewController.swift */,
+				5B770FEF2BF0B6530048AB3C /* FavViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				5B770F912BF05F6A0048AB3C /* AppDelegate.swift in Sources */,
 				5B770FD42BF0654D0048AB3C /* StringExtension.swift in Sources */,
 				5B770FC52BF063F00048AB3C /* ComicItem.swift in Sources */,
+				5B770FF02BF0B6530048AB3C /* FavViewController.swift in Sources */,
 				5B770FCF2BF063F00048AB3C /* Keys.swift in Sources */,
 				5B770FE12BF0918B0048AB3C /* DetailViewController.swift in Sources */,
 				5B770FB62BF062890048AB3C /* CharacterCell.swift in Sources */,
